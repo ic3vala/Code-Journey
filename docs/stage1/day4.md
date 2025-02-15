@@ -15,7 +15,7 @@ graph TD
 ### 核心练习
 
 #### 1. 宠物类设计
-**文件路径**: [Pet.java](../../../src/main/java/com/lyh/day4/model/Pet.java)
+**文件路径**: [Pet.java](../../src/main/java/com/lyh/day4/model/Pet.java)
 ```java
 package com.lyh.day4.model;
 
@@ -77,6 +77,6 @@ public class LifecycleDemo {
 ---
 
 ## 🧭 导航
-[⬅️ Day3 数组与排序](../Day3.md)  
-[➡️ Day5 OOP进阶](../Day5.md)  
+[⬅️ Day3 数组与排序](./day3.md)  
+[➡️ Day5 OOP进阶](./day5.md)  
 [🏠 返回目录](../../README.md)
