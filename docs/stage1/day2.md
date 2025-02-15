@@ -18,7 +18,7 @@ graph TD
 ### 核心练习
 
 #### 1. Scanner输入工具类
-**文件路径**: [ScannerUtils.java](../../../src/main/java/com/lyh/day2/util/ScannerUtils.java)
+**文件路径**: [ScannerUtils.java](../../src/main/java/com/lyh/day2/util/ScannerUtils.java)
 ```java
 package com.lyh.day2.util;
 
@@ -134,7 +134,7 @@ public static int factorial(int n) {
 ---
 
 ## 🧭 导航
-[⬅️ Day1 基础语法](../day1.md)  
-[➡️ Day3 数组与排序](../day3.md)  
+[⬅️ Day1 基础语法](./day1.md)  
+[➡️ Day3 数组与排序](./day3.md)  
 [🏠 返回目录](../../README.md)
 
