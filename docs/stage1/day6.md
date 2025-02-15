@@ -39,7 +39,7 @@ public interface Flyable {
 ### 核心实现
 
 #### 1. 抽象类定义
-**文件路径**: [Animal.java](../../../src/main/java/com/lyh/day6/model/Animal.java)
+**文件路径**: [Animal.java](../../src/main/java/com/lyh/day6/model/Animal.java)
 ```java
 package com.lyh.day6.model;
 
