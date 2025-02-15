@@ -59,7 +59,7 @@ public abstract class Animal {
 ```
 
 #### 2. 接口定义
-**文件路径**: [Swimmable.java](../../../src/main/java/com/lyh/day6/model/Swimmable.java)
+**文件路径**: [Swimmable.java](../../src/main/java/com/lyh/day6/model/Swimmable.java)
 ```java
 package com.lyh.day6.model;
 
@@ -73,7 +73,7 @@ public interface Swimmable {
 ```
 
 #### 3. 具体实现类
-**文件路径**: [Fish.java](../../../src/main/java/com/lyh/day6/model/Fish.java)
+**文件路径**: [Fish.java](../../src/main/java/com/lyh/day6/model/Fish.java)
 ```java
 package com.lyh.day6.model;
 
@@ -101,7 +101,7 @@ public class Fish extends Animal implements Swimmable {
 }
 ```
 
-**文件路径**: [Bird.java](../../../src/main/java/com/lyh/day6/model/Bird.java)
+**文件路径**: [Bird.java](../../src/main/java/com/lyh/day6/model/Bird.java)
 ```java
 package com.lyh.day6.model;
 
@@ -132,7 +132,7 @@ public class Bird extends Animal implements Flyable {
 ---
 
 ### 主程序演示
-**文件路径**: [Main.java](../../../src/main/java/com/lyh/day6/Main.java)
+**文件路径**: [Main.java](../../src/main/java/com/lyh/day6/Main.java)
 ```java
 package com.lyh.day6;
 
