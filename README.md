@@ -16,7 +16,7 @@ CodeLab
 ## 📚 学习轨迹
 | 天数 | 主题 | 代码示例                                                       | 笔记链接                        |
 |------|------|------------------------------------------------------------|-----------------------------|
-| Day1 | 基础语法 | [Hello.java](./src/main/java/com/lyh/day1/HelloWorld.java) | [笔记](./docs/stage1/day1.md) |
+| Day1 | 基础语法 | [HelloWorld.java](./src/main/java/com/lyh/day1/HelloWorld.java) | [笔记](./docs/stage1/day1.md) |
 | Day2 | 方法与流程控制 | [学生管理系统](./src/main/java/com/lyh/day2/student/)            | [笔记](./docs/stage1/day2.md) |
 | Day5 | 面向对象进阶 | [动物继承体系](./src/main/java/com/lyh/day5/model/)              | [笔记](./docs/stage1/day5.md) |
 
