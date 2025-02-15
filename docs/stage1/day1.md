@@ -21,7 +21,7 @@
 
 ---
 ### 代码练习
-- [HelloWorld.java](../../../src/main/java/com/lyh/day1/Hello.java)
+- [HelloWorld.java](../../src/main/java/com/lyh/day1/Hello.java)
 ```java
 package com.lyh.day1;
 
@@ -35,4 +35,4 @@ public class HelloWorld {
 ### 遇到的问题
 - 为什么`String`是类而不是基本类型？
 
-- [下一节：Java方法](../day2.md)
+- [下一节：Java方法](./day2.md)
