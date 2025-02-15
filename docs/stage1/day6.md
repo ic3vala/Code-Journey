@@ -204,6 +204,6 @@ public interface Flyable {
 ---
 
 ## 🧭 导航
-[⬅️ Day5 OOP进阶](../Day5)  
-[➡️ Day7 异常处理](../Day7)  
+[⬅️ Day5 OOP进阶](day5.md)  
+[➡️ Day7 异常处理](day7.md)  
 [🏠 返回目录](../../README.md)
