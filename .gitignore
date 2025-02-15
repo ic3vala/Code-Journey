@@ -1,12 +1,15 @@
+# 编译文件
+*.class
+*.jar
+*.war
 
-# IntelliJ配置（全忽略）
+# IDE配置
 .idea/
 *.iml
-*.ipr
 
-# 编译输出
-target/
+# 构建输出
 out/
+target/
 
 # 系统文件
 .DS_Store
