@@ -16,7 +16,7 @@ graph TD
 ### 核心练习
 
 #### 1. 数组基本操作
-**文件路径**: [ArrayDemo.java](../../../src/main/java/com/lyh/day3/ArrayDemo.java)
+**文件路径**: [ArrayDemo.java](../../src/main/java/com/lyh/day3/ArrayDemo.java)
 ```java
 package com.lyh.day3;
 
@@ -38,7 +38,7 @@ public class ArrayDemo {
 ```
 
 #### 2. 冒泡排序优化版
-**文件路径**: [BubbleSort.java](../../../src/main/java/com/lyh/day3/sort/BubbleSort.java)
+**文件路径**: [BubbleSort.java](../../src/main/java/com/lyh/day3/sort/BubbleSort.java)
 ```java
 package com.lyh.day3.sort;
 
@@ -79,6 +79,6 @@ public class BubbleSort {
 ---
 
 ## 🧭 导航
-[⬅️ Day2 方法与流程控制](../Day2.md)  
-[➡️ Day4 类与对象](../Day4.md)  
+[⬅️ Day2 方法与流程控制](./day2.md)  
+[➡️ Day4 类与对象](./day4.md)  
 [🏠 返回目录](../../README.md)
