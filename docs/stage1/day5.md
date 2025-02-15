@@ -16,7 +16,7 @@ graph TD
 ### 核心练习
 
 #### 1. 类型安全转换（新增）
-**文件路径**: [TypeCastDemo.java](../../../src/main/java/com/lyh/day5/TypeCastDemo.java) 🔴
+**文件路径**: [TypeCastDemo.java](../../src/main/java/com/lyh/day5/TypeCastDemo.java) 🔴
 ```java
 // 新增Java16+模式匹配语法示例
 if (animal instanceof Cat cat) {
@@ -50,6 +50,6 @@ if (animal instanceof Cat cat) {
 ---
 
 ## 🧭 导航
-[⬅️ Day4 类与对象基础](../Day4.md)  
-[➡️ Day6 抽象类与接口](../Day6.md)  
+[⬅️ Day4 类与对象基础](./Day4.md)  
+[➡️ Day6 抽象类与接口](./Day6.md)  
 [🏠 返回目录](../../README.md)
