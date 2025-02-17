@@ -23,7 +23,9 @@ CodeLab
 | Day5 | 面向对象进阶 | [动物继承体系](./src/main/java/com/lyh/day5/model/)                   | [笔记](./docs/stage1/day5.md) |
 | Day6 | 抽象类与接口 | [具体实现类](./src/main/java/com/lyh/day6/model/Fish.java)           | [笔记](./docs/stage1/day6.md) |
 | Day7 | 异常处理 | [异常处理方法](./src/main/java/com/lyh/day7/ExceptionTest.java)                          | [笔记](./docs/stage1/day7.md) |
-
+| Day8 | 集合框架 | [HashMap测试](./src/main/java/com/lyh/day8/HashMapTest.java) | [笔记](./docs/stage1/day8.md) |
+| Day9 | 文件与IO | [实现CSV文件解析器](./src/main/java/com/lyh/day9/CSVParser.java) | [笔记](./docs/stage1/day9.md) |
+| Day10 | 多线程基础 | [](./src/main/java/com/lyh/day10/.java) | [笔记](./docs/stage1/day10.md) |
 ## 🛠 开发规范
 1. **包命名原则**：`com.lyh.dayX.module`（X为天数）
 2. **提交规范**：
