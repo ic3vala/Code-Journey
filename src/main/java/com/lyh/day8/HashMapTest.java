@@ -1,6 +1,6 @@
 package com.lyh.day8;
 
-import java.util.HashMap;
+import java.util.*;
 
 public class HashMapTest {
     public static void main(String[] args) {
@@ -14,5 +14,8 @@ public class HashMapTest {
         System.out.println(map.get("K"));
         map.remove("uii");
         System.out.println(map);
+        List<Map.Entry<String, Integer>> entryList = new ArrayList<>(map.entrySet());
+        entryList.sort(Map.Entry.comparingByValue(Comparator.reverseOrder()));
+        System.out.println(entryList);
     }
 }

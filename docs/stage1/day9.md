@@ -52,6 +52,155 @@
 
     - 适当调整缓冲区大小可以提高读取效率，但需要根据实际应用场景和数据量来决定。
 
+## 🧩 核心概念
+### **1. `Files.readAllLines()` 方法解析**
+#### **功能**
+**一次性读取文件所有行**，返回 `List<String>`（每行作为列表元素）。
+
+#### **代码示例**
+```java
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.List;
+
+public class ReadFileDemo {
+    public static void main(String[] args) throws Exception {
+        Path path = Paths.get("test.txt");
+        List<String> lines = Files.readAllLines(path); // 默认使用 UTF-8 编码
+        lines.forEach(System.out::println);
+    }
+}
+```
+
+#### **重载方法**
+```java
+// 指定字符编码
+List<String> lines = Files.readAllLines(path, StandardCharsets.ISO_8859_1);
+```
+
+#### **特点**
+- **优点**：代码简洁，适合小文件快速读取。
+- **缺点**：
+    - 全量加载到内存，大文件可能导致 `OutOfMemoryError`。
+    - 无法逐行处理（需要全部读取后才操作）。
+
+---
+
+### **2. 其他常用 NIO 快捷方法**
+#### **(1) `Files.readAllBytes()`**
+- **功能**：读取文件所有字节到 `byte[]`。
+- **适用场景**：二进制文件（如图片、视频）。
+```java
+byte[] data = Files.readAllBytes(path);
+```
+
+#### **(2) `Files.write()`**
+- **功能**：写入内容到文件（覆盖模式）。
+- **支持数据类型**：`byte[]`、`Iterable<String>`（如 `List<String>`）。
+```java
+// 写入字符串列表（每行一个元素）
+List<String> content = Arrays.asList("Line 1", "Line 2");
+Files.write(path, content, StandardCharsets.UTF_8);
+
+// 追加写入（需指定 OpenOption）
+Files.write(path, content, StandardCharsets.UTF_8, StandardOpenOption.APPEND);
+```
+
+#### **(3) `Files.newBufferedReader()` / `Files.newBufferedWriter()`**
+- **功能**：创建带缓冲的读写流（适合大文件逐行处理）。
+```java
+// 读取大文件（逐行处理，避免内存溢出）
+try (BufferedReader reader = Files.newBufferedReader(path)) {
+    String line;
+    while ((line = reader.readLine()) != null) {
+        // 处理每行
+    }
+}
+
+// 写入文件
+try (BufferedWriter writer = Files.newBufferedWriter(path)) {
+    writer.write("Hello, NIO!");
+}
+```
+
+#### **(4) `Files.lines()`（Java 8+）**
+- **功能**：返回 `Stream<String>`，**惰性读取**文件内容。
+- **优势**：适合大文件逐行处理，内存友好。
+```java
+try (Stream<String> stream = Files.lines(path)) {
+    stream.filter(line -> line.contains("error"))
+          .forEach(System.out::println);
+}
+```
+
+---
+
+### **3. 核心注意事项**
+#### **(1) 编码问题**
+- 默认使用 `UTF-8`，若文件编码不同需显式指定：
+  ```java
+  Files.readAllLines(path, StandardCharsets.GBK);
+  ```
+
+#### **(2) 异常处理**
+- 所有方法均可能抛出 `IOException`，需捕获或声明抛出：
+  ```java
+  try {
+      List<String> lines = Files.readAllLines(path);
+  } catch (IOException e) {
+      e.printStackTrace();
+  }
+  ```
+
+#### **(3) 大文件处理**
+- **避免使用** `readAllLines()` / `readAllBytes()`，改用流式处理：
+  ```java
+  // 使用 Files.lines() 的 Stream
+  Files.lines(path).parallel().forEach(line -> process(line));
+  ```
+
+---
+
+### **4. 性能对比**
+| **方法**               | **内存占用** | **速度** | **适用场景**               |
+|------------------------|-------------|---------|---------------------------|
+| `readAllLines()`       | 高           | 快       | 小文本文件（<100MB）       |
+| `lines()` + Stream     | 低           | 中等     | 大文件逐行处理             |
+| `newBufferedReader()`  | 低           | 中等     | 需要精细控制读取流程       |
+
+---
+
+### **5. 典型应用场景**
+1. **配置文件读取**
+   ```java
+   // 快速读取 properties 文件
+   Map<String, String> config = Files.lines(configPath)
+       .map(line -> line.split("="))
+       .collect(Collectors.toMap(arr -> arr[0], arr -> arr[1]));
+   ```
+
+2. **日志文件分析**
+   ```java
+   // 统计 ERROR 日志数量
+   long errorCount = Files.lines(logPath)
+                          .filter(line -> line.contains("ERROR"))
+                          .count();
+   ```
+
+3. **快速复制文件**
+   ```java
+   byte[] data = Files.readAllBytes(sourcePath);
+   Files.write(targetPath, data);
+   ```
+
+---
+
+### **总结**
+- **小文件**：优先用 `readAllLines()` / `readAllBytes()`，代码简洁。
+- **大文件**：使用 `Files.lines()` 或 `BufferedReader` 流式处理。
+- **编码敏感场景**：始终显式指定字符集。
+
 ## 💻 代码实验室
 
 ### 核心练习
