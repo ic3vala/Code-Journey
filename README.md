@@ -32,7 +32,7 @@ CodeLab
 | Day11 | JSON处理 | [](./src/main/java/com/lyh/day11/.java)                         | [笔记](./docs/stage1/day11.md) |
 | Day12 | 数组与链表 | [动态数组实现](./src/main/java/com/lyh/day12/DynamicArrayTest.java)   | [笔记](./docs/stage2/day12.md) |
 | Day13 | 栈与队列 | [链表实现栈](./src/main/java/com/lyh/day13/LinkedListStack.java)     | [笔记](./docs/stage2/day13.md) |
-| Day14 | 排序算法 | [](./src/main/java/com/lyh/day14/.java)                         | [笔记](./docs/stage2/day14.md) |
+| Day14 | 排序算法 | [快速排序](./src/main/java/com/lyh/day14/QuickSort.java)                         | [笔记](./docs/stage2/day14.md) |
 | Day15 | 哈希表 | [](./src/main/java/com/lyh/day15/.java)                         | [笔记](./docs/stage2/day15.md) |
 | Day16 | 树与图基础 | [](./src/main/java/com/lyh/day16/.java)                         | [笔记](./docs/stage2/day16.md) |
 ## 🛠 开发规范
