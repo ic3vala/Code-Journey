@@ -2,25 +2,21 @@ package com.lyh.day16;
 
 
 public class TreeTest {
-    public static void main(String[] args) {
-        TreeNode root = new TreeNode(10);
-        root.left = new TreeNode(5);
-        root.right = new TreeNode(15);
-        root.left.left = new TreeNode(3);
-        root.right.right = new TreeNode(7);
-        //root.printTree(root);
-        //先序遍历
-        root.preOrder(root);
-        System.out.println();
+       public static void main(String[] args) {
+        BST bst = new BST();
+        bst.insert(50);
+        bst.insert(30);
+        bst.insert(70);
+        bst.insert(20);
+        bst.insert(40);
 
-        //中序遍历
-        root.inOrder(root);
-        System.out.println();
-
-        //后序遍历
-        root.postOrder(root);
-        System.out.println();
-
-
+        TreeNode root = bst.getRoot();
+        System.out.println("中序遍历：");
+        root.inOrder(root); // 输出：20 30 40 50 70
+        System.out.println("\n查找 40：" + (bst.search(40) != null)); // true
+        bst.delete(30);
+        System.out.println("删除 30 后中序遍历：");
+        root.inOrder(root); // 输出：20 40 50 70
+        System.out.println("\n是否为有效 BST：" + bst.isValidBST()); // true
     }
 }
