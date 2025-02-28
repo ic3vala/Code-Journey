@@ -1,4 +1,4 @@
-# Code-Journey
+# JAVA-Code-Journey
 
 [![Last Commit](https://img.shields.io/github/last-commit/ic3vala/Code-Journey?color=blue&style=flat-square)](https://github.com/ic3vala/Code-Journey/commits/main)
 
